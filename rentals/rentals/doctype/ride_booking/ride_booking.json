@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-18 11:24:26.472879",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nddm",
+  "amended_from",
+  "order",
+  "column_break_pxgy",
+  "driver",
+  "vehicle",
+  "section_break_kkpe",
+  "items",
+  "section_break_uxva",
+  "rate",
+  "column_break_fzvt",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_nddm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "order.type_of_vehicle",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_kkpe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Ride Booking Item"
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Order",
+   "options": "Ride Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pxgy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uxva",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_fzvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-18 12:47:59.112929",
+ "modified_by": "Administrator",
+ "module": "Rentals",
+ "name": "Ride Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

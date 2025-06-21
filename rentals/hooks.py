@@ -148,7 +148,12 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+    "Corn":{
+        "* * * * *":[
+            "rentals.rentals.api.get_emoji"
+        ]
+    }
 # 	"all": [
 # 		"rentals.tasks.all"
 # 	],
@@ -164,7 +169,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"rentals.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
@@ -242,3 +247,5 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+website_route_rules = [{'from_route': '/portal/<path:app_path>', 'to_route': 'portal'},]
